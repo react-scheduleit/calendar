@@ -11,7 +11,10 @@ interface RowContainerInterface {
 }
 
 interface GridItemInterface {
-  isHoliday?: boolean;
+  isWeekend?: boolean;
+  isToday?: boolean;
+  todayBackground?: string;
+  isDisableDay?: boolean;
 }
 
 export const FlatContainer = styled.div<FlatContainerIterface>`
@@ -41,5 +44,21 @@ export const GridContainer = styled.div`
 
 export const GridItemContainer = styled.div<GridItemInterface>`
   margin: auto;
-  background: ${(props) => (props?.isHoliday ? 'red' : `transparent`)};
+  color: ${(props) => {
+    if (props?.isDisableDay && props?.isWeekend) {
+      return '#854343';
+    } else if (props?.isDisableDay) {
+      return '#5c5d5e';
+    } else if (!props?.isWeekend && props?.isToday) {
+      return '#000';
+    } else if (props?.isWeekend || (props?.isWeekend && props?.isToday)) {
+      return 'red';
+    } else {
+      return '#fff';
+    }
+  }};
+  background: ${(props) =>
+    props?.isToday ? props?.todayBackground : `transparent`};
+  border-radius: ${(props) => (props?.isToday ? '10%' : `0`)};
+  padding: ${(props) => (props?.isToday ? '3px' : `0`)};
 `;
