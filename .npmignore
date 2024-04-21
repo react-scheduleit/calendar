@@ -1,0 +1,12 @@
+node_modules
+
+/.cache
+/build
+.env
+/app
+vite*
+package-lock.json
+tailwind*
+public
+.eslint*
+postcss*
