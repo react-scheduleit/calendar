@@ -1,4 +1,12 @@
+#!/bin/sh
+
+CURRENT_VERSION=$(npm pkg version)
+
 npm version patch
-git add package.json
-git commit -m "Bump version to $(node -p -e "require('./package.json').version")"
-git push
+
+NEW_VERSION=$(npm pkg version)
+
+git add .
+git commit -m "Bump version to ${NEW_VERSION}"
+
+git push origin main
