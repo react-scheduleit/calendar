@@ -7,5 +7,5 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  ignoreWatch: ["**/dist", "**/node_modules"],
+  ignoreWatch: ["dist", "node_modules"],
 });
