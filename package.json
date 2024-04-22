@@ -15,6 +15,7 @@
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
+    "build:package:watch": "vite build --watch --config vite.config.package.ts",
     "build:package": "vite build --config vite.config.package.ts",
     "prepublishOnly": "npm run build:package",
     "prepare": "husky",
@@ -24,6 +25,7 @@
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
+    "hot-scheduler": "^0.1.20",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
