@@ -26,6 +26,11 @@ jobs:
           npm version patch
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Push changes
+        run: |
+          git add .
+          git commit -m "Bump version"
+          git push
       - name: Publish to npm
         run: npm publish --access=public
         env:
