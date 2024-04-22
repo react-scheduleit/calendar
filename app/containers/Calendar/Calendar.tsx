@@ -1,4 +1,4 @@
-interface ICalendar {}
+export interface ICalendar {}
 
 const Calendar: React.FC<ICalendar> = () => {
   return (

@@ -1,6 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import Calendar from "~/containers/Calendar/Calendar";
-import DatePicker from "~/containers/DatePicker/DatePicker";
+import { Calendar, DatePicker } from "hot-scheduler";
 
 export const meta: MetaFunction = () => {
   return [

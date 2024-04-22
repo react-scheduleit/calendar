@@ -1,4 +1,4 @@
-interface IDatePicker {}
+export interface IDatePicker {}
 
 const DatePicker: React.FC<IDatePicker> = () => {
   return (

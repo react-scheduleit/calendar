@@ -1,11 +1,10 @@
 node_modules
 
-/.cache
-/build
+.cache
+build
 .env
-/app
+app
 vite*
-package-lock.json
 tailwind*
 public
 .eslint*
