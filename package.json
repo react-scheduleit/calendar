@@ -16,7 +16,9 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "build:package": "tsup",
-    "prepublishOnly": "npm run build:package"
+    "prepublishOnly": "npm run build:package",
+    "prepare": "husky",
+    "test": ""
   },
   "dependencies": {
     "@remix-run/node": "^2.8.1",
@@ -41,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "tsup": "^8.0.2",

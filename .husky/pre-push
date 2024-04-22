@@ -1,0 +1,4 @@
+npm version patch
+git add package.json
+git commit -m "Bump version to $(node -p -e "require('./package.json').version")"
+git push
