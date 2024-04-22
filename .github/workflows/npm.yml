@@ -18,7 +18,7 @@ jobs:
         run: |
           git --version
           git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+          git config user.email "<me@ehsangazar.com>"
 
       - name: Bump version and publish
         id: version
@@ -28,7 +28,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Push changes
         run: |
-          git add -A
           git push
       - name: Publish to npm
         run: npm publish --access=public
