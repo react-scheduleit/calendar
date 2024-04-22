@@ -16,6 +16,7 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "build:package": "tsup",
+    "build:package:watch": "tsup --watch",
     "prepublishOnly": "npm run build:package",
     "prepare": "husky",
     "test": ""
